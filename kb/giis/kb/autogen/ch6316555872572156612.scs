@@ -1,0 +1,29 @@
+ch6316555872572156612 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s6316555872572156612;
+    => nrel_main_idtf:
+        [Тракторный];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				5;;
+        			-> rrel_minutes:
+        				50;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				5;;
+        			-> rrel_minutes:
+        				51;;
+        		*);;
+        *);;

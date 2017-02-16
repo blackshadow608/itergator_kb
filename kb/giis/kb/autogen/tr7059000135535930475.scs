@@ -1,0 +1,17 @@
+tr7059000135535930475 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Институт Культуры — Барановичи-Полесские](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [6807];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch7601248984422695541;;
+    		->rrel_rw_route_point: ch7601248984422695541;;
+    		->rrel_rw_route_point: ch669019991521044942;;
+    		->rrel_rw_route_point: ch_7039852571499713225;;
+    		->rrel_rw_route_last_point: ch_7039852571499713225;;
+    	*);;
+
+ch7601248984422695541 => nrel_next_point: ch669019991521044942;;
+ch669019991521044942 => nrel_next_point: ch_7039852571499713225;;

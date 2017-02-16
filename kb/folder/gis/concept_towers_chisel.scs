@@ -1,0 +1,9 @@
+concept_towers_chisel
+	=> nrel_main_idtf:
+		[Вышки буровые] (*<- lang_ru;;*);
+		[Towers chisel] (*<- lang_en;;*);
+	=> nrel_name_of_classification_categories_and_map_object:
+		[Промышленные объекты.Соружения при промышленных объектах.Вышки.Вышки буровые] (*<- lang_ru;;*);
+	=> nrel_first_domain: 
+		nrel_height; nrel_reference_wells_and_buildings_and_etc..;
+	=> nrel_classification_code_of_OKRB_012_2007: [51432000](*<- text;;*);;

@@ -1,0 +1,28 @@
+sc_node_not_relation -> new_events; natural_number;;
+sc_node_norole_relation -> nrel_bool_begin_year; nrel_bool_begin_month; nrel_bool_begin_day;
+nrel_bool_endYear; nrel_bool_end_month; nrel_bool_end_day;;
+2017 => nrel_main_idtf:
+[2017](* <- lang_ru;; *);
+[2017](* <- lang_en;; *);;
+2 => nrel_main_idtf: 
+[2](* <- lang_ru;; *);
+[2](* <- lang_en;; *);;
+28 => nrel_main_idtf: 
+[28](* <- lang_ru;; *);
+[28](* <- lang_en;; *);;
+17 => nrel_main_idtf:
+[17](* <- lang_ru;; *);
+[17](* <- lang_en;; *);;
+new_events -> new_event;;
+date -> new_event_begin_date;;
+date -> new_event_end_date;;
+new_event => nrel_begin_event : new_event_begin_date;;
+new_event => nrel_end_event: new_event_end_date;;
+new_event_begin_date => nrel_clndr : ..six_begin_node;;
+new_event_end_date => nrel_clndr : ..six_end_node;;
+..six_begin_node -> rrel_day_num : 28;;
+..six_begin_node -> rrel_month_num : 7;;
+..six_begin_node -> rrel_year_num : 2016;;
+..six_end_node -> rrel_day_num : 28;;
+..six_end_node -> rrel_month_num : 7;;
+..six_end_node -> rrel_year_num : 2016;;

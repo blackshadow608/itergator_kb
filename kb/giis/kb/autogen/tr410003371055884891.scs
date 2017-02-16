@@ -1,0 +1,17 @@
+tr410003371055884891 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Институт Культуры — Осиповичи-1](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [6916];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch7601248984422695541;;
+    		->rrel_rw_route_point: ch7601248984422695541;;
+    		->rrel_rw_route_point: ch_5324786418727486541;;
+    		->rrel_rw_route_point: ch9216701450681477129;;
+    		->rrel_rw_route_last_point: ch9216701450681477129;;
+    	*);;
+
+ch7601248984422695541 => nrel_next_point: ch_5324786418727486541;;
+ch_5324786418727486541 => nrel_next_point: ch9216701450681477129;;

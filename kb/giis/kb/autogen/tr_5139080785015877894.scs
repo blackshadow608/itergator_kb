@@ -1,0 +1,17 @@
+tr_5139080785015877894 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Барановичи-Полесские — Институт Культуры](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [6808];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch_7039852571499713225;;
+    		->rrel_rw_route_point: ch_7039852571499713225;;
+    		->rrel_rw_route_point: ch669019991521044942;;
+    		->rrel_rw_route_point: ch7601248984422695541;;
+    		->rrel_rw_route_last_point: ch7601248984422695541;;
+    	*);;
+
+ch_7039852571499713225 => nrel_next_point: ch669019991521044942;;
+ch669019991521044942 => nrel_next_point: ch7601248984422695541;;

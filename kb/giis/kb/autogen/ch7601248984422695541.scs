@@ -1,0 +1,29 @@
+ch7601248984422695541 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s7601248984422695541;
+    => nrel_main_idtf:
+        [Институт Культуры];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				6;;
+        			-> rrel_minutes:
+        				2;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				0;;
+        			-> rrel_minutes:
+        				0;;
+        		*);;
+        *);;

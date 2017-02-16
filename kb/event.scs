@@ -1,0 +1,52 @@
+//
+sc_node_not_relation -> event;;
+event => nrel_main_idtf :[событие] (* <- lang_ru;; *);;
+event => nrel_main_idtf :[event](* <- lang_en;; *);;
+
+//определение 
+
+event <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(событие)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Событие — то, что имеет место, происходит, наступает в произвольной точке пространства-времени; значительное происшествие, явление или иная деятельность как факт общественной или личной жизни; подмножество исходов эксперимента.]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+
+
+//утверждения
+
+event <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(событие)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Ю. М. Лотман пишет, что событием является то, что «произошло, хотя могло и не произойти».]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(эпоха;история;событие)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[В истории эпохи размечаются событиями того или иного значения.](* <- lang_ru;; *);;
+*);;
+*);;
+
+

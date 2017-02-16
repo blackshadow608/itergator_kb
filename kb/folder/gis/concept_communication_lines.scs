@@ -1,0 +1,9 @@
+concept_communication_lines 
+	=> nrel_main_idtf:
+		[Линии связи] (*<- lang_ru;;*);
+		[communication lines] (*<- lang_en;;*);
+	=> nrel_name_of_classification_categories_and_map_object:
+		[Промышленные объекты.Коммуникации.Линии электропередач кабельные, линии связи] (*<- lang_ru;;*);
+	=> nrel_first_domain: 
+		nrel_height; nrel_state;nrel_nature_of_location_relative_to_earth_water_surface;nrel_bearing_type;nrel_number_of_power_lines_and_pipe_lines_and_rows_of_trees_and_bridge_openings;nrel_importance_of_object;
+	=> nrel_classification_code_of_OKRB_012_2007: [51330000](*<- text;;*);;

@@ -1,0 +1,20 @@
+concept_departure_time
+    => nrel_main_idtf:
+        [departure time] (* <- lang_en;; *);
+        [время отправления] (* <- lang_ru;; *);
+        
+        <- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			=> nrel_main_idtf: [Definition (absolute concept)](*<- lang_en;;*);;
+			=> nrel_main_idtf: [Определение (абсолютное понятие)](*<- lang_ru;;*);;
+			<= nrel_sc_text_translation:...
+				(*
+					-> rrel_example:
+						[Время прибытия - точное время отбытия поезда.] 
+						(*
+							<- lang_ru;;
+							=> nrel_format: format_html;;
+						*);;
+					*);;
+        *);;

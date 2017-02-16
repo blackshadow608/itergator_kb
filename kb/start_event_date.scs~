@@ -1,0 +1,52 @@
+//синонимы
+sc_node_norole_relation -> nrel_start_event_date;;
+nrel_start_event_date => nrel_main_idtf :[дата начала события*] (* <- lang_ru;; *);;
+nrel_start_event_date => nrel_main_idtf :[event start date](* <- lang_en;; *);;
+
+//определение 
+
+nrel_start_event_date <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(дата конца события*)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Дата коца события - дата начала временного промежутка, в течение которого проходит событие]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+//утверждения
+nrel_start_event_date <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(дата начала события*] (* <- lang_ru;; *);; 
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Дата начала события ещё не установлена.]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(дата начала события*)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Дата начала события 2 января 2017 года.](* <- lang_ru;; *);;
+*);;
+*);;
+
+//домены
+
+nrel_start_event_date <= nrel_first_domain: event;;
+nrel_start_event_date <= nrel_second_domain: date;;

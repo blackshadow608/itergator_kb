@@ -1,0 +1,20 @@
+concept_railway_route
+    => nrel_main_idtf:
+        [railway route] (* <- lang_en;; *);
+        [маршрут поезда] (* <- lang_ru;; *);
+        
+        <- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			=> nrel_main_idtf: [Definition (absolute concept)](*<- lang_en;;*);;
+			=> nrel_main_idtf: [Определение (абсолютное понятие)](*<- lang_ru;;*);;
+			<= nrel_sc_text_translation:...
+				(*
+					-> rrel_example:
+						[Маршрут поезда - упорядоченное множество станций, через которые проходит поезд.] 
+						(*
+							<- lang_ru;;
+							=> nrel_format: format_html;;
+						*);;
+					*);;
+        *);;

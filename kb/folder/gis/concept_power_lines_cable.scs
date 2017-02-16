@@ -1,0 +1,7 @@
+concept_power_lines_cable 
+	=> nrel_main_idtf:
+		[линии электропередач кабельные] (*<- lang_ru;;*);
+		[power lines cable] (*<- lang_en;;*);
+	=> nrel_name_of_classification_categories_and_map_object:
+		[ЛИНИИ ЭЛЕКТРОПЕРЕДАЧИ КАБЕЛЬНЫЕ.Промышленные объекты.] (*<- lang_ru;;*);
+	=> nrel_classification_code_of_OKRB_012_2007: [51322000](*<- text;;*);;

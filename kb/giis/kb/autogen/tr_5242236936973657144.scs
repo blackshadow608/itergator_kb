@@ -1,0 +1,15 @@
+tr_5242236936973657144 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Брест-Центральный — Минск-Пассажирский](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [652Б];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch_4800834790695270770;;
+    		->rrel_rw_route_point: ch_4800834790695270770;;
+    		->rrel_rw_route_point: ch_4800834790695270770;;
+    		->rrel_rw_route_last_point: ch_4800834790695270770;;
+    	*);;
+
+ch_4800834790695270770 => nrel_next_point: ch_4800834790695270770;;

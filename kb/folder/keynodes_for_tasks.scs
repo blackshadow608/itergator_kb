@@ -1,0 +1,53 @@
+sc_node_norole_relation -> nrel_priority;;
+nrel_priority => nrel_main_idtf :[Приоритет задачи*] (* <- lang_ru;; *);;
+nrel_priority => nrel_main_idtf :[Priority task*](* <- lang_en;; *);;
+
+
+nrel_priority <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(Приоритет задачи*)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Приоритет задачи — понятие, показывающее важность задачи. Приоритет задач определяет порядок их выполнения во времени.]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+
+
+nrel_priority <= nrel_first_domain: task;;
+nrel_priority <= nrel_second_domain: priority;;
+
+
+sc_node_not_relation -> priority;;
+
+priority => nrel_main_idtf:
+	 [приортет]
+	(*
+		<- lang_ru;;
+	*);
+	[priority]
+	(*
+		<- lang_en;;
+	*);;
+	
+
+	priority 
+		<- rrel_key_sc_element:...
+		(*
+			=>nrel_main_idtf:[Опр.(транспорт)](*<- lang_ru;;*);;
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+				(*
+					-> [Приоритет - степень выжности чего-либо.](*<- lang_ru;;*);;
+				*);;
+		*);;
+
+priority -> hi_priority;;
+priority -> middle_priority;;
+priority -> super_priority;;
+priority -> low_priority;;

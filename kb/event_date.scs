@@ -1,0 +1,53 @@
+//синонимы
+sc_node_norole_relation -> nrel_end_event_date;;
+nrel_end_event_date => nrel_main_idtf :[дата конца события*] (* <- lang_ru;; *);;
+nrel_end_event_date => nrel_main_idtf :[event end date](* <- lang_en;; *);;
+
+//определение 
+
+nrel_end_event_date <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(дата конца события*)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Дата коца события - дата окончания временного промежутка, в течение которого проходит событие]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+//утверждения
+nrel_end_event_date <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(дата конца события*] (* <- lang_ru;; *);; 
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Дата конца события ещё не установлена.]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(дата конца события*)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Дата коца события 28 января 2017 года.](* <- lang_ru;; *);;
+*);;
+*);;
+
+//домены
+
+nrel_end_event_date <= nrel_first_domain: event;;
+nrel_end_event_date <= nrel_second_domain: date;;
+

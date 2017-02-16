@@ -1,0 +1,29 @@
+ch669019991521044942 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s669019991521044942;
+    => nrel_main_idtf:
+        [Столичный];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				7;;
+        			-> rrel_minutes:
+        				14;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				7;;
+        			-> rrel_minutes:
+        				15;;
+        		*);;
+        *);;

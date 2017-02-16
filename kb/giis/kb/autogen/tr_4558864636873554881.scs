@@ -1,0 +1,17 @@
+tr_4558864636873554881 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Осиповичи-1 — Минск-Пассажирский](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [6919];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch9216701450681477129;;
+    		->rrel_rw_route_point: ch9216701450681477129;;
+    		->rrel_rw_route_point: ch_5324786418727486541;;
+    		->rrel_rw_route_point: ch_4800834790695270770;;
+    		->rrel_rw_route_last_point: ch_4800834790695270770;;
+    	*);;
+
+ch9216701450681477129 => nrel_next_point: ch_5324786418727486541;;
+ch_5324786418727486541 => nrel_next_point: ch_4800834790695270770;;

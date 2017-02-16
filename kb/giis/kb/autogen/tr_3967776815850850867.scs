@@ -1,0 +1,19 @@
+tr_3967776815850850867 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Минск-Пассажирский — Молодечно](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [6133];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch_4800834790695270770;;
+    		->rrel_rw_route_point: ch_4800834790695270770;;
+    		->rrel_rw_route_point: ch4741595669798131240;;
+    		->rrel_rw_route_point: ch8389279855346909183;;
+    		->rrel_rw_route_point: ch_2693491521324037808;;
+    		->rrel_rw_route_last_point: ch_2693491521324037808;;
+    	*);;
+
+ch_4800834790695270770 => nrel_next_point: ch4741595669798131240;;
+ch4741595669798131240 => nrel_next_point: ch8389279855346909183;;
+ch8389279855346909183 => nrel_next_point: ch_2693491521324037808;;

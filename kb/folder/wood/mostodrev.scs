@@ -1,0 +1,219 @@
+mostovdrev
+	=> nrel_main_idtf: [mostovdrev](*<- lang_en;;*);
+			[ОАО "Мостовдрев"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>Нафтан</b> —  древообрабатывающее предприятие, расположено в городе Мосты.]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+mostovdrev => nrel_industry_branch: wood_industry;;
+mostovdrev => nrel_foundation_date: [1917];;
+mostovdrev => nrel_location: [Мосты];;
+
+pinskdrev
+	=> nrel_main_idtf: [pinskdrev](*<- lang_en;;*);
+			[ОАО "Пинскдрев"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>Пинскдрев</b> —  древообрабатывающее предприятие, расположено в городе Мосты.]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+pinskdrev => nrel_industry_branch: wood_industry;;
+pinskdrev => nrel_foundation_date: [1880];;
+pinskdrev => nrel_location: [Пинск];;
+
+
+ivacevichdrev
+	=> nrel_main_idtf: [ivacevichdrev](*<- lang_en;;*);
+			[ОАО "ИВАЦЕВИЧДРЕВ"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>ИВАЦЕВИЧДРЕВ</b> —  предприятие с высоким уровнем технического оснащения. Оно в течение многих десятилетий удовлетворяет потребности потребителей в высококачественной продукции, широком ассортименте сырья и комплектующих изделий для производства мебели и других нужд.]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+ivacevichdrev => nrel_industry_branch: wood_industry;;
+ivacevichdrev => nrel_foundation_date: [1993];;
+ivacevichdrev => nrel_location: [Ивацевичи];;
+
+
+rechicadrev
+	=> nrel_main_idtf: [rechicadrev](*<- lang_en;;*);
+			[ОАО "Речицадрев"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>Речицадрев</b> —   это высокотехнологичное предприятие, специализирующееся на заготовке и вывозе круглых лесоматериалов, производстве древесно-стружечных плит, клееной фанеры, лущеного и строганного шпона, пиломатериалов, офисной и бытовой мебели, различных изделий из дерева]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+rechicadrev => nrel_industry_branch: wood_industry;;
+rechicadrev => nrel_foundation_date: [1982];;
+rechicadrev => nrel_location: [Речицадрев];;
+
+
+molodechnomebel
+	=> nrel_main_idtf: [molodechnomebel](*<- lang_en;;*);
+			[ОАО "Молодечномебель"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>Молодечномебель</b> —  меет в своем активе более 50 лет истории. Предприятие объединено из Молодечненской и Вилейской мебельных фабрик. Его продукция пользуется спросом, как в Беларуси, так и за рубежом.Мебель ЗАО «Молодечномебель» отмечена многочисленными дипломами различных белорусских и международных выставок за дизайн, высокое качество, широкий производственный ассортимент и высокий технический уровень производства.]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+molodechnomebel => nrel_industry_branch: wood_industry;;
+molodechnomebel => nrel_foundation_date: [1954];;
+molodechnomebel => nrel_location: [Молодечно];;
+
+
+lidamebel
+	=> nrel_main_idtf: [lidamebel](*<- lang_en;;*);
+			[ОАО "Лидская мебельная фабрика"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>Лидская мебельная фабрика</b> —  История фабрики началась в 1944 году. С 1947 года здесь начали производить простейшую мебель. Впоследствии, после множественных преобразований данной организации, в 1994 году была создана Лидская мебельная фабрика.]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+lidamebel => nrel_industry_branch: wood_industry;;
+lidamebel => nrel_foundation_date: [1944];;
+lidamebel => nrel_location: [Лида];;
+
+
+ruzhanymebel
+	=> nrel_main_idtf: [ruzhanymebel](*<- lang_en;;*);
+			[ЧУП "РУЖАНСКАЯ МЕБЕЛЬНАЯ ФАБРИКА"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>РУЖАНСКАЯ МЕБЕЛЬНАЯ ФАБРИКА</b> —  Основное направление деятельности – производство мебели с фасадами из плит МДФ. Предприятие заняло свою нишу на мебельном рынке, выпуская недорогую качественную мебель с современным дизайном.
+					Наборы мебели для спальни «Александрина», «Алеся», «Купалинка» сегодня хорошо известны в Беларуси, России, Казахстане, Таджикистане, Молдове, Франции, Бельгии и других странах.]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+ruzhanymebel => nrel_industry_branch: wood_industry;;
+ruzhanymebel => nrel_foundation_date: [1944];;
+ruzhanymebel => nrel_location: [Ружаны];;
+
+
+vitebskdrev
+	=> nrel_main_idtf: [vitebskdrev](*<- lang_en;;*);
+			[ОАО "Витебскдрев"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>Витебскдрев</b> —   это современное, динамично развивающееся предприятие, с восьмидесятидевятилетним опытом в области деревообработки (располагает возможностями переработки до 1 000 м куб. древесного сырья в сутки).]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+vitebskdrev => nrel_industry_branch: wood_industry;;
+vitebskdrev => nrel_foundation_date: [1954];;
+vitebskdrev => nrel_location: [Витебск];;
+
+
+borisovdrev
+	=> nrel_main_idtf: [borisovdrev](*<- lang_en;;*);
+			[ОАО "БОРИСОВДРЕВ"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>БОРИСОВДРЕВ</b> —    современное предприятие, специализирующееся на производстве фанеры, спичек, тонких древесноволокнистых плит МДФ.Продукция поставляется практически во все государства СНГ, Германию, Польшу, Литву и другие страны.Фирменные магазины ОАО «Борисовдрев» работают в г.Борисове, г. Осиповичи и д. Синявка Клецкого района.]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+borisovdrev => nrel_industry_branch: wood_industry;;
+borisovdrev => nrel_foundation_date: [1901];;
+borisovdrev => nrel_location: [Борисов];;
+
+industry_enterprise -> borisovdrev;vitebskdrev;ruzhanymebel;lidamebel;molodechnomebel;rechicadrev;ivacevichdrev;pinskdrev;mostovdrev;bobruiskmebel;;
+
+bobruiskmebel
+	=> nrel_main_idtf: [bobruiskmebel](*<- lang_en;;*);
+			[ОАО "БОБРУЙСКМЕБЕЛЬ"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>БОБРУЙСКМЕБЕЛЬ</b> —    современное предприятие, специализирующееся на производстве фанеры, спичек, тонких древесноволокнистых плит МДФ.Продукция поставляется практически во все государства СНГ, Германию, Польшу, Литву и другие страны.Фирменные магазины ОАО «Борисовдрев» работают в г.Борисове, г. Осиповичи и д. Синявка Клецкого района.]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+bobruiskmebel => nrel_industry_branch: wood_industry;;
+bobruiskmebel => nrel_foundation_date: [1926];;
+bobruiskmebel => nrel_location: [Бобруйск];;

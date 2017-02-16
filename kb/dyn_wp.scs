@@ -1,0 +1,52 @@
+//синонимы
+sc_node_not_relation -> dynamic_web_page;;
+dynamic_web_page => nrel_main_idtf :[динамическая веб-страница] (* <- lang_ru;; *);;
+dynamic_web_page => nrel_main_idtf :[dynamic web page](* <- lang_en;; *);;
+
+//определение 
+
+dynamic_web_page <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(динамическая веб-страница)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Динамическая веб-страница — страница, на которой присутствуют javascript сценарии]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+
+//утверждения
+
+dynamic_web_page <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(Динамическая веб-страница)] (* <- lang_ru;; *);; 
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Динамическая веб-страница дороже в разработке, чем статическая.]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(Динамическая веб-страница)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Динамическая веб-страница удобней для пользователя, чем статическая.](* <- lang_ru;; *);;
+*);;
+*);;
+
+concept_web_page -> dynamic_web_page;;
+concept_web_page -> static_web_page;;

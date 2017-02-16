@@ -1,0 +1,4 @@
+rrel_hours
+    => nrel_main_idtf:
+        [hours'] (* <- lang_en;; *);
+        [часы'] (* <- lang_ru;; *);;

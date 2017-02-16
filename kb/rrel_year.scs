@@ -1,0 +1,46 @@
+//синонимы
+sc_node_role_relation -> rrel_number_of_the_year;;
+rrel_number_of_the_year => nrel_main_idtf :[год'] (* <- lang_ru;; *);;
+rrel_number_of_the_year => nrel_main_idtf :[year'](* <- lang_en;; *);;
+
+//определение 
+
+rrel_number_of_the_year <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(год')]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Год — условная единица измерения времени, которая исторически означала однократный цикл сезонов (весна, лето, осень, зима).В большинстве стран календарная продолжительность года равна 365 или 366 дням. В настоящее время год употребляется также в качестве временной характеристики обращения планет вокруг звёзд в планетарных системах, в частности Земли вокруг Солнца.]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+rrel_number_of_the_year <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(год')] (* <- lang_ru;; *);; 
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[2008 год выдался тяжелым для мировой экономики.]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(год')] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[В 1799 году родился известный русский поэт драматург и прозаик Александр Сергеевич Пушкин.](* <- lang_ru;; *);;
+*);;
+*);;
+

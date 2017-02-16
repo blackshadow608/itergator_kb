@@ -1,0 +1,10 @@
+
+nrel_existence -> name2;;
+name2 => nrel_main_idtf :[Существуют множества не включающие себя.] (* <- lang_ru;; *);;
+name2->rrel_bind_variables: _x;;
+name2->..node1;;
+nrel_equivalence-> ..node1;;
+..node1 ->  [* _x _<- set;; *] (* <- concept_atomic_existence ;;*) ;;
+..node1 -> ..node2;;
+nrel_neg-> ..node2;;
+..node2 ->  [* _x _<= nrel_include: _x;; *] (* <- concept_atomic_existence ;;*) ;;

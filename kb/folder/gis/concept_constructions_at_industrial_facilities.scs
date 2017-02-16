@@ -1,0 +1,7 @@
+concept_constructions_at_industrial_facilities 
+	=> nrel_main_idtf:
+		[Соружения при промышленных объектах] (*<- lang_ru;;*);
+		[Constructions at industrial facilities] (*<- lang_en;;*);
+	=> nrel_name_of_classification_categories_and_map_object:
+		[Промышленные объекты.Соружения при промышленных объектах] (*<- lang_ru;;*);
+	=> nrel_classification_code_of_OKRB_012_2007: [51400000](*<- text;;*);;

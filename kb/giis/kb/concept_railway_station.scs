@@ -1,0 +1,22 @@
+concept_railway_station
+    => nrel_main_idtf:
+        [railway station] (* <- lang_en;; *);
+        [железнодорожная станция] (* <- lang_ru;; *);
+        
+        <- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			=> nrel_main_idtf: [Definition (absolute concept)](*<- lang_en;;*);;
+			=> nrel_main_idtf: [Определение (абсолютное понятие)](*<- lang_ru;;*);;
+			<= nrel_sc_text_translation:...
+				(*
+					-> rrel_example:
+						[Железнодородная станция - основной объект железнодорожного транспорта, имеющий путевое развитие,
+                        позволяющее производить операции по приёму, отправке, скрещению и обгону поездов,
+                        операции по приему, выдаче грузов, багажа и грузобагажа и обслуживанию пассажиров.] 
+						(*
+							<- lang_ru;;
+							=> nrel_format: format_html;;
+						*);;
+					*);;
+        *);;

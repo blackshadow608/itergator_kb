@@ -1,0 +1,29 @@
+ch9216701450681477129 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s9216701450681477129;
+    => nrel_main_idtf:
+        [Лошица];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				13;;
+        			-> rrel_minutes:
+        				6;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				13;;
+        			-> rrel_minutes:
+        				7;;
+        		*);;
+        *);;

@@ -1,0 +1,58 @@
+//синонимы
+sc_node_not_relation -> concept_website;;
+concept_website => nrel_main_idtf :[веб-сайт] (* <- lang_ru;; *);;
+concept_website => nrel_main_idtf :[website](* <- lang_en;; *);;
+
+//определение 
+
+concept_website <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(веб-сайт)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Сайт — система электронных документов (файлов данных и кода) частного лица или организации в компьютерной сети под 				общим адресом (доменным именем или IP-адресом).]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+// иерархия связи с другими понтиями 
+
+concept_website <= nrel_inclusion : concept_web_page;;
+
+
+//утверждения
+_website => nrel_main_idtf :[_сайт] (* <- lang_ru;; *);;
+_proxy => nrel_main_idtf :[_сервер] (* <- lang_ru;; *);;
+
+concept_website <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(веб-сайт;размещение*;сервер)] (* <- lang_ru;; *);; 
+-> rrel_main_key_sc_element: stat_proxy_website;; 
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Сайты размещают на сервере.]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(верстка;шаблон;веб-сайт)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Верстальщик получает макеты шаблонов в виде простых изображений (например, в формате JPEG или PNG), либо разбитых по слоям (например, в PSD или AI). Его задача — получить из этих графических макетов гипертекстовые веб-страницы с подготовленными для интернета изображениями.](* <- lang_ru;; *);;
+*);;
+*);;
+
+

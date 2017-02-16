@@ -1,0 +1,20 @@
+concept_arrival_time
+    => nrel_main_idtf:
+        [arrival time] (* <- lang_en;; *);
+        [время прибытия] (* <- lang_ru;; *);
+        
+        <- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			=> nrel_main_idtf: [Definition (absolute concept)](*<- lang_en;;*);;
+			=> nrel_main_idtf: [Определение (абсолютное понятие)](*<- lang_ru;;*);;
+			<= nrel_sc_text_translation:...
+				(*
+					-> rrel_example:
+						[Время прибытия - точное время остановки поезда на станции.] 
+						(*
+							<- lang_ru;;
+							=> nrel_format: format_html;;
+						*);;
+					*);;
+        *);;

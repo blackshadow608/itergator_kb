@@ -1,0 +1,22 @@
+naftan
+	=> nrel_main_idtf: [naftan](*<- lang_en;;*);
+			[ОАО "Нафтан"](*<- lang_ru;;*);
+	<- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			<= nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+					[ <b>Нафтан</b> —  одно из двух белорусских нефтеперерабатывающих предприятий. Завод расположен в промышленной зоне
+					города Новополоцка в 4 км к юго-западу от жилых массивов города..]
+					(*
+						<- lang_ru;;
+						=> nrel_format: format_html;;
+					*);;
+			*);;
+		*);;
+		
+naftan => nrel_industry_branch: fuel_industry;;
+naftan => nrel_foundation_date: [1963];;
+naftan => nrel_location: [Новополоцк];;
+naftan => nrel_employee_number: [10814];;

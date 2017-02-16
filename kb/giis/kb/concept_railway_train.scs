@@ -1,0 +1,21 @@
+concept_railway_train
+    => nrel_main_idtf:
+        [train] (* <- lang_en;; *);
+        [поезд] (* <- lang_ru;; *);
+        
+         <- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			=> nrel_main_idtf: [Definition (absolute concept)](*<- lang_en;;*);;
+			=> nrel_main_idtf: [Определение (абсолютное понятие)](*<- lang_ru;;*);;
+			<= nrel_sc_text_translation:...
+				(*
+					-> rrel_example:
+						[Поезд - сформированный и сцепленный состав, состоящий из группы вагонов,
+                        с одним или несколькими действующими локомотивами или моторными вагонами.] 
+						(*
+							<- lang_ru;;
+							=> nrel_format: format_html;;
+						*);;
+					*);;
+        *);;

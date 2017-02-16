@@ -1,0 +1,52 @@
+//
+sc_node_not_relation -> cost;;
+cost => nrel_main_idtf :[стоимость] (* <- lang_ru;; *);;
+cost => nrel_main_idtf :[cost](* <- lang_en;; *);;
+
+//определение 
+
+cost <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(стоимость)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Стоимость в повседневной речи — цена товара, затраты на приобретение. Близко к терминам затраты, себестоимость.]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+
+
+//утверждения
+
+cost <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(стоимость;товар)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Стоимость товара не соответствует качеству.]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(стоимость;автомобиль)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Стоимость автомобиля немного завышена.](* <- lang_ru;; *);;
+*);;
+*);;
+
+

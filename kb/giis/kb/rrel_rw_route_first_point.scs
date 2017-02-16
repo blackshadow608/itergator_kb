@@ -1,0 +1,4 @@
+rrel_rw_route_first_point
+    => nrel_main_idtf:
+        [first train route checkpoint'] (* <- lang_en;; *);
+        [первая точка маршрута поезда'] (* <- lang_ru;; *);;

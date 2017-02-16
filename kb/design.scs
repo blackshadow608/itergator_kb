@@ -1,0 +1,49 @@
+//синонимы
+sc_node_not_relation -> design;;
+design => nrel_main_idtf :[дизайнер] (* <- lang_ru;; *);;
+design => nrel_main_idtf :[design](* <- lang_en;; *);;
+
+//определение 
+
+design <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(дизайн)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Диза́йн (от англ. design — проектировать, чертить, задумать, а также проект, план, рисунок) — деятельность по проектированию эстетических свойств промышленных изделий («художественное конструирование»), а также результат этой деятельности.]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+
+//утверждения
+
+design <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(дизайн)] (* <- lang_ru;; *);; 
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Дизайн веб-страницы сложный]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(дизайн)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Дизайн разработан профессионалом](* <- lang_ru;; *);;
+*);;
+*);;

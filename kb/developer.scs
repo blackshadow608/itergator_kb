@@ -1,0 +1,49 @@
+//синонимы
+sc_node_not_relation -> developer;;
+developer => nrel_main_idtf :[разработчик ПО] (* <- lang_ru;; *);;
+developer => nrel_main_idtf :[developer](* <- lang_en;; *);;
+
+//определение 
+
+developer <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(веб-страница)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Разработчик программного обеспечения - человек, занимающийся написанием исходного кода программ]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+
+//утверждения
+
+developer <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(разработчик)] (* <- lang_ru;; *);; 
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Разработчик не выполнил полностью требования]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(разработчик)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Оценка, данная разработчиком Петровым немного занижена](* <- lang_ru;; *);;
+*);;
+*);;

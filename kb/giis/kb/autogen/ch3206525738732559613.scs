@@ -1,0 +1,29 @@
+ch3206525738732559613 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s3206525738732559613;
+    => nrel_main_idtf:
+        [Озерище];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				5;;
+        			-> rrel_minutes:
+        				41;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				5;;
+        			-> rrel_minutes:
+        				42;;
+        		*);;
+        *);;

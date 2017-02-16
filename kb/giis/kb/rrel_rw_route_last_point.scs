@@ -1,0 +1,4 @@
+rrel_rw_route_last_point
+    => nrel_main_idtf:
+        [last train route checkpoint'] (* <- lang_en;; *);
+        [последняя точка маршрута поезда'] (* <- lang_ru;; *);;

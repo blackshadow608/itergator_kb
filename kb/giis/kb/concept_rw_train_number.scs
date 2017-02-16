@@ -1,0 +1,20 @@
+concept_rw_train_number
+    => nrel_main_idtf:
+        [train number] (* <- lang_en;; *);
+        [номер поезда] (* <- lang_ru;; *);
+        
+        <- rrel_key_sc_element:...
+		(*
+			<- sc_definition;;
+			=> nrel_main_idtf: [Definition (absolute concept)](*<- lang_en;;*);;
+			=> nrel_main_idtf: [Определение (абсолютное понятие)](*<- lang_ru;;*);;
+			<= nrel_sc_text_translation:...
+				(*
+					-> rrel_example:
+						[Номер поезда - уникальный идентификационный номер поезда.] 
+						(*
+							<- lang_ru;;
+							=> nrel_format: format_html;;
+						*);;
+					*);;
+        *);;

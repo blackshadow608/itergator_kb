@@ -1,0 +1,4 @@
+rrel_minutes
+    => nrel_main_idtf:
+        [minutes'] (* <- lang_en;; *);
+        [минуты'] (* <- lang_ru;; *);;

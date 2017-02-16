@@ -1,0 +1,29 @@
+ch3639498611884321712 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s3639498611884321712;
+    => nrel_main_idtf:
+        [Степянка];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				5;;
+        			-> rrel_minutes:
+        				46;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				5;;
+        			-> rrel_minutes:
+        				47;;
+        		*);;
+        *);;

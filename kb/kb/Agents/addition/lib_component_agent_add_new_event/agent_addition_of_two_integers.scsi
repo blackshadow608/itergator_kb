@@ -1,0 +1,938 @@
+agent_addition_of_two_integers
+=> nrel_main_idtf:
+	[агентная scp-программа добавления нового события] (* <- lang_ru;; *);
+	
+	[agent scp-program for adding new event] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_addition_of_two_integers 
+	(*
+	-> rrel_params: .agent_addition_of_two_integers_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .proc_search_all_input_params_operators_set(*
+
+    -> rrel_init: .agent_search_time_for_event(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+      -> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _question;;
+      => nrel_goto: .agent_search_time_for_event_2;;
+      *);;
+    -> .agent_search_time_for_event_2(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: question_addition_of_two_integers;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc00;;
+      -> rrel_3: rrel_fixed: rrel_scp_var: _question;;
+      => nrel_then: .agent_search_time_for_event_3;;
+      => nrel_else: .proc_search_user_events_return_2;;
+      *);;
+    -> .agent_search_time_for_event_3(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _question;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc01;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc02;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_first_number;;
+      => nrel_goto: .proc_initial_print;;
+      *);;
+    -> .agent_search_time_for_event_4(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _question;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc01;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc02;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_first_number;;
+      => nrel_goto: .proc_initial_print;;
+      *);;
+    -> .proc_initial_print(*
+      <- printNl;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: [something happening];;
+      => nrel_goto: .proc_gen_answer;;
+      *);;
+    -> .proc_gen_answer(*
+    	<- genEl;;
+    	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer;;
+    	=> nrel_goto: .debug_print_2;;
+    	*);;
+    -> .debug_print_2(*
+    	<- printNl;;
+    	-> rrel_1: rrel_fixed: rrel_scp_const: [error here];;
+    	=> nrel_goto: .proc_gen_answer_1;;
+    	*);;
+    -> .proc_gen_answer_1(*
+    	<- genElStr3;;
+    	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+    	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc41;;
+    	-> rrel_3: rrel_fixed: rrel_scp_var: _new_event;;
+    	=> nrel_goto: .debug_print_30;;
+    	*);;
+    -> .debug_print_30(*
+    	<- printNl;;
+    	-> rrel_1: rrel_fixed: rrel_scp_const: [after new event];;
+    	=> nrel_goto: .proc_gen_begin_day_set;;
+    	*);;
+    -> .proc_gen_begin_day_set(*
+      <- genEl;;
+      -> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_scp_var: _begin_day_set;;
+      => nrel_goto: .proc_gen_begin_month_set;;
+      *);;
+    -> .proc_print_test(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_day_set;;
+      => nrel_goto: .proc_gen_begin_month_set;;
+      *);;
+    -> .proc_gen_begin_month_set(*
+      <- genEl;;
+      -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _begin_month_set;;
+      => nrel_goto: .proc_gen_begin_year_set;;
+      *);;
+    -> .proc_gen_begin_year_set(*
+      <- genEl;;
+      -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _begin_year_set;;
+      => nrel_goto: .proc_gen_end_day_set;;
+      *);;
+    -> .proc_gen_end_day_set(*
+      <- genEl;;
+      -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _end_day_set;;
+      => nrel_goto: .proc_gen_end_month_set;;
+      *);;
+    -> .proc_gen_end_month_set(*
+      <- genEl;;
+      -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _end_month_set;;
+      => nrel_goto: .proc_gen_end_year_set;;
+      *);;
+    -> .proc_gen_end_year_set(*
+      <- genEl;;
+      -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _end_year_set;;
+      => nrel_goto: .proc_debug_info;;
+      *);;
+    -> .proc_debug_info(*
+     <- searchElStr3;;
+     -> rrel_1: rrel_fixed: rrel_scp_const: calendar_scale;;
+     -> rrel_2: rrel_assign: rrel_scp_var: _arc0;;
+     -> rrel_3: rrel_assign: rrel_scp_var: _grig_cal;;
+     => nrel_then: .proc_debug_info_1;;
+     => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_debug_info_1(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: not_rel_dates;;
+      => nrel_goto: .proc_debug_info_2;;
+      *);;
+    -> .proc_debug_info_2(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: rrel_day_num;;
+      => nrel_goto: .proc_search_user_events;;
+      *);;
+    -> .proc_search_user_events(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: users;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _user;;
+      => nrel_then: .proc_search_user_events_debug_1;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_1(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _user;;
+      => nrel_goto: .proc_gen_answer_2;;
+      *);;
+    -> .proc_gen_answer_2(*
+    	<- genElStr3;;
+    	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+    	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc40;;
+    	-> rrel_3: rrel_fixed: rrel_scp_var: _user;;
+    	=> nrel_goto: .proc_search_user_events_1;;
+    	*);;
+    -> .proc_search_user_events_1(*
+      <- searchSetStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _user;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _some_event;;
+      -> rrel_set_3: rrel_assign: rrel_scp_var: _user_event_set;;
+      => nrel_then: .proc_search_user_events_debug_2;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_2(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _user_event_set;;
+      => nrel_goto: .proc_search_user_events_2;;
+      *);;
+    -> .proc_search_user_events_2(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _user_event_set;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _some_event;;
+      => nrel_then: .proc_search_user_events_debug_3;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_3(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_event;;
+      => nrel_goto: .proc_search_user_events_3;;
+      *);;
+    -> .proc_search_user_events_3(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_event;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc4;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _some_event_date;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc5;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_begin_event;;
+      => nrel_then: .proc_search_user_events_debug_4;;
+      => nrel_else: .proc_search_user_events_return;; 
+      *);;
+    -> .proc_search_user_events_debug_4(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_event_date;;
+      => nrel_goto: .proc_search_user_events_4;;
+      *);;
+    -> .proc_search_user_events_4(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_event_date;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc4;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _some_date;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc5;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_clndr;;
+      => nrel_then: .proc_print_begin_date;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_print_begin_date(*
+      <- printNl;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: [Begin event date];;
+      => nrel_goto: .proc_search_user_events_debug_5;;
+      *);;
+    -> .proc_search_user_events_debug_5(*
+        <- printEl;;
+        -> rrel_1: rrel_fixed: rrel_scp_var: _some_date;;
+        => nrel_goto: .proc_search_user_events_5;;
+        *);;
+    -> .proc_search_user_events_5(*
+      <- searchSetStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_date;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc4;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc5;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_day_num;;
+      -> rrel_set_3: rrel_fixed: rrel_scp_var: _begin_day_set;;
+      => nrel_then: .proc_search_user_events_debug_6;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_6(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _day;;
+      => nrel_goto: .proc_search_user_events_5_1;;
+      *);;
+    -> .proc_search_user_events_5_1(*
+      <- searchSetStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_date;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc7_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _begin_month;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc8_1;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_month_num;;
+      -> rrel_set_3: rrel_fixed: rrel_scp_var: _begin_month_set;;
+      => nrel_then: .proc_search_user_events_debug_6_1;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_6_1(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_month;;
+      => nrel_goto: .proc_search_user_events_5_2;;
+      *);;
+    -> .proc_search_user_events_5_2(*
+      <- searchSetStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_date;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc7_2;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _begin_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc8_1;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_year_num;;
+      -> rrel_set_3: rrel_fixed: rrel_scp_var: _begin_year_set;;
+      => nrel_then: .proc_search_user_events_debug_6_2;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_6_2(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_year;;
+      => nrel_goto: .proc_search_user_events_6;;
+      *);;
+    -> .proc_search_user_events_6(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_event;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc4;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_some_event_date;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc5;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_end_event;;
+      => nrel_then: .proc_search_user_events_debug_7;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_7(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_some_event_date;;
+      => nrel_goto: .proc_search_user_events_7;;
+      *);;
+    -> .proc_search_user_events_7(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_some_event_date;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc11;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _some_end_date;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc12;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_clndr;;
+      => nrel_then: .proc_print_end_date;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_print_end_date(*
+      <- printNl;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: [End date];;
+      => nrel_goto: .proc_search_user_events_debug_8;;
+      *);;
+    -> .proc_search_user_events_debug_8(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_end_date;;
+      => nrel_goto: .proc_search_user_events_8;;
+      *);;
+    -> .proc_search_user_events_8(*
+      <- searchSetStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_end_date;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc12;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc13;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_day_num;;
+      -> rrel_set_3: rrel_fixed: rrel_scp_var: _end_day_set;;
+      => nrel_then: .proc_search_user_events_debug_9;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_9(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_day;;
+      => nrel_goto: .proc_search_user_events_8_1;;
+      *);;
+    -> .proc_search_user_events_8_1(*
+      <- searchSetStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_end_date;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc12_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_month;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc13_1;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_month_num;;
+      -> rrel_set_3: rrel_fixed: rrel_scp_var: _end_month_set;;
+      => nrel_then: .proc_search_user_events_debug_9_1;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_9_1(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_month;;
+      => nrel_goto: .proc_search_user_events_8_2;;
+      *);;
+    -> .proc_search_user_events_8_2(*
+      <- searchSetStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _some_end_date;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc12_2;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc13_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_year_num;;
+      -> rrel_set_3: rrel_fixed: rrel_scp_var: _end_year_set;;
+      => nrel_then: .proc_search_user_events_debug_9_2;;
+      => nrel_else: .proc_search_user_events_return;;
+      *);;
+    -> .proc_search_user_events_debug_9_2(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_day;;
+      => nrel_goto: .proc_search_user_events_10;;
+      *);;
+    -> .proc_search_user_events_10(*
+      <- eraseEl;;
+      -> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc3;;
+      => nrel_goto: .proc_search_user_events_debug_10;;
+      *);;
+    -> .proc_search_user_events_debug_10(*
+      <- printNl;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: [erase arc];;
+      => nrel_goto: .proc_search_user_events_debug_2;;
+      *);;
+    -> .proc_search_user_events_return(* 
+      <- printNl;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: [return_];;
+      => nrel_goto: .proc_search_new_event;; 
+      *);;
+    -> .proc_prepare_search_new_event(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: new_events;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event;;
+      => nrel_then: .proc_search_new_event;;
+      => nrel_else: .proc_print_debug;;
+      *);;
+    -> .proc_print_debug(*
+      <- printNl;;
+      -> rrel_1: rrel_fixed: rrel_scp_const: [all very very bad];;
+      => nrel_goto: .proc_search_new_event;;
+      *);;
+    -> .proc_search_new_event(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc14;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_begin_date;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc15;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_begin_event;;
+      => nrel_then: .proc_search_new_event_debug;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_date;;
+      => nrel_goto: .proc_search_new_event_1;;
+      *);;
+    -> .proc_search_new_event_1(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_date;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc14;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_begin_day_month_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc15;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_clndr;;
+      => nrel_then: .proc_search_new_event_debug_1;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_1(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day_month_year;;
+      => nrel_goto: .proc_search_new_event_2;;
+      *);;
+    -> .proc_search_new_event_2(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day_month_year;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc16;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_begin_day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc17;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_day_num;;
+      => nrel_then: .proc_search_new_event_debug_2;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_2(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day;;
+      => nrel_goto: .proc_search_new_event_begin_day_link;;
+      *);;
+    -> .proc_search_new_event_begin_day_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc17_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_begin_day_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_18;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_print_new_event_begin_day_link;;
+      *);;
+    -> .proc_print_new_event_begin_day_link(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day_link;;
+      => nrel_goto: .proc_search_new_event_3;;
+      *);;
+    -> .proc_search_new_event_3(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day_month_year;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc19;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_begin_month;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc20;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_month_num;;
+      => nrel_then: .proc_search_new_event_debug_3;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_3(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_month;;
+      => nrel_goto: .proc_search_new_event_begin_month_link;;
+      *);;
+    -> .proc_search_new_event_begin_month_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_month;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc19_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_begin_month_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc20_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_new_event_4;;
+      *);;
+    -> .proc_search_new_event_4(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day_month_year;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc21;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_begin_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc22;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_year_num;;
+      => nrel_then: .proc_search_new_event_debug_4;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_4(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_year;;
+      => nrel_goto: .proc_search_new_event_begin_year_link;;
+      *);;
+    -> .proc_search_new_event_begin_year_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_year;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc21_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_begin_year_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc22_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_new_event_5;;
+      *);;
+    -> .proc_search_new_event_5(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc21;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_end_date;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc22;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_end_event;;
+      => nrel_then: .proc_search_new_event_debug_5;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_5(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_date;;
+      => nrel_goto: .proc_search_new_event_6;;
+      *);;
+    -> .proc_search_new_event_6(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_date;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc25;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_end_day_month_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc26;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_clndr;;
+      => nrel_then: .proc_search_new_event_debug_6;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_6(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_day_month_year;;
+      => nrel_goto: .proc_search_new_event_7;;
+      *);;
+    -> .proc_search_new_event_7(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_day_month_year;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc21;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_end_day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc22;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_day_num;;
+      => nrel_then: .proc_search_new_event_debug_7;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_7(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_day;;
+      => nrel_goto: .proc_search_new_event_end_day_link;;
+      *);;
+    -> .proc_search_new_event_end_day_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_day;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc27_11;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_end_day_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc27_22;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_new_event_8;;
+      *);;
+    -> .proc_search_new_event_8(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_day_month_year;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc21;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_end_month;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc22;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_month_num;;
+      => nrel_then: .proc_search_new_event_debug_8;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_8(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_month;;
+      => nrel_goto: .proc_search_new_event_end_month_link;;
+      *);;
+    -> .proc_search_new_event_end_month_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_month;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc29_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_end_month_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc29_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_new_event_9;;
+      *);;
+    -> .proc_search_new_event_9(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_day_month_year;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc21;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_end_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc22;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: rrel_year_num;;
+      => nrel_then: .proc_search_new_event_debug_9;;
+      => nrel_else: .proc_search_user_events_return_1;;
+      *);;
+    -> .proc_search_new_event_debug_9(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_year;;
+      => nrel_goto: .proc_search_new_event_end_year_link;;
+      *);;
+    -> .proc_search_new_event_end_year_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_year;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc31_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _new_event_end_year_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc32_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_same_begin_year;;
+      *);;
+    -> .proc_search_same_begin_year(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_year_set;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc33;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _begin_year_date;;
+      => nrel_then: .proc_search_begin_year_date_debug;;
+      => nrel_else: .proc_check_bool_begin_year;;
+      *);;
+    -> .proc_search_begin_year_date_debug(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_year_date;;
+      => nrel_goto: .proc_search_same_begin_year_date_link;;
+      *);;
+    -> .proc_search_same_begin_year_date_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_year_date;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc33_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _begin_year_date_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc33_2;;
+      -> rrel_5: rrel_fixed: rrel_const: nrel_main_idtf;;
+      => nrel_goto: .proc_debug_print;;
+      *);;
+    -> .proc_debug_print(*
+    	<- printNl;;
+    	-> rrel_1: rrel_fixed: rrel_scp_const: [oh shit i am sorry];;
+    	=> nrel_goto: .proc_search_same_begin_year_date_2;;
+    	*);;
+    -> .proc_search_same_begin_year_date_2(*
+      <- ifEq;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_year_date_link;;
+      -> rrel_2: rrel_fixed: rrel_scp_var: _new_event_begin_year_link;;
+      => nrel_then: .proc_gen_bool_begin_year;;
+      => nrel_else: .proc_search_same_begin_begin_year_del_arc;;
+      *);;
+    -> .proc_gen_bool_begin_year(*
+      <- genElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_year;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_begin_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_begin_year;;
+      => nrel_goto: .proc_search_same_begin_begin_year_del_arc;;
+      *);;
+    -> .proc_search_same_begin_begin_year_del_arc(*
+      <- eraseEl;;
+      -> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc33;;
+      => nrel_goto: .proc_search_same_begin_year;;
+      *);;
+    -> .proc_check_bool_begin_year(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_year;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_begin_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_begin_year;;
+      => nrel_then: .proc_search_same_begin_month;;
+      => nrel_else: .proc_search_same_end_year;;
+      *);;
+    -> .proc_search_same_begin_month(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_month_set;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc35;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _begin_month_date;;
+      => nrel_then: .proc_search_same_begin_month_debug;;
+      => nrel_else: .proc_check_bool_begin_month;;
+      *);;
+    -> .proc_search_same_begin_month_debug(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_month_date;;
+      => nrel_goto: .proc_search_same_begin_month_link;;
+      *);;
+    -> .proc_search_same_begin_month_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_month_date;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc35_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _begin_month_date_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_35_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_same_begin_month_2;;
+      *);;
+    -> .proc_search_same_begin_month_2(*
+      <- ifEq;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_month_date_link;;
+      -> rrel_2: rrel_fixed: rrel_scp_var: _new_event_begin_month_link;;
+      => nrel_then: .proc_gen_bool_begin_month;;
+      => nrel_else: .proc_search_same_begin_month_del_arc;;
+      *);;
+    -> .proc_gen_bool_begin_month(*
+      <- genElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_month;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_begin_month;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_begin_month;;
+      => nrel_goto: .proc_search_same_begin_month_del_arc;;
+      *);;
+    -> .proc_search_same_begin_month_del_arc(*
+      <- eraseEl;;
+      -> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc35;;
+      => nrel_goto: .proc_search_same_begin_month;;
+      *);;
+    -> .proc_check_bool_begin_month(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_month;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_begin_month;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_begin_month;;
+      => nrel_then: .proc_search_same_begin_day;;
+      => nrel_else: .proc_search_same_end_year;;
+      *);;
+    -> .proc_search_same_begin_day(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_day_set;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc36;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _begin_same_day;;
+      => nrel_then: .proc_search_same_begin_day_debug;;
+      => nrel_else: .debug_print;;
+      *);;
+    -> .proc_search_same_begin_day_debug(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_same_day;;
+      => nrel_goto: .proc_search_same_begin_day_link;;
+      *);;
+    -> .proc_search_same_begin_day_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_same_day;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc36_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _begin_same_day_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc36_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_same_begin_day_2;;
+      *);;
+    -> .proc_search_same_begin_day_2(*
+      <- ifEq;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _begin_same_day_link;;
+      -> rrel_2: rrel_fixed: rrel_scp_var: _new_event_begin_day_link;;
+      => nrel_then: .proc_gen_bool_begin_day;;
+      => nrel_else: .proc_search_same_begin_day_del_arc;;
+      *);;
+    -> .proc_gen_bool_begin_day(*
+      <- genElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_begin_day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_begin_day;;
+      => nrel_goto: .proc_search_same_begin_day_del_arc;;
+      *);;
+    -> .proc_search_same_begin_day_del_arc(*
+      <- eraseEl;;
+      -> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc36;;
+      => nrel_goto: .proc_search_same_begin_day;;
+      *);;
+    -> .proc_check_bool_begin_day(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_begin_day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_begin_day;;
+      => nrel_then: .proc_search_user_events_return_1;;
+      => nrel_else: .proc_search_same_end_year;;
+      *);;
+    -> .debug_print(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_begin_day_link;;
+      => nrel_goto: .proc_check_bool_begin_day;;
+      *);;
+    -> .proc_search_same_end_year(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_year_set;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc37;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_year_date;;
+      => nrel_then: .proc_search_same_end_year_debug;;
+      => nrel_else: .proc_check_bool_end_year;;
+      *);;
+    -> .proc_search_same_end_year_debug(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_year_date;;
+      => nrel_goto: .proc_search_same_end_year_link;;
+      *);;
+    -> .proc_search_same_end_year_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_year_date;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc37_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_year_date_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc37_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_same_end_year_1;;
+      *);;
+    -> .proc_search_same_end_year_1(*
+      <- ifEq;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_year_date_link;;
+      -> rrel_2: rrel_fixed: rrel_scp_var: _new_event_end_year_link;;
+      => nrel_then: .proc_gen_bool_end_year;;
+      => nrel_else: .proc_search_same_end_year_del_arc;;
+      *);;
+    -> .proc_gen_bool_end_year(*
+      <- genElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_year;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_end_year;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_end_year;;
+      => nrel_goto: .proc_search_same_end_year_del_arc;;
+      *);;
+    -> .proc_search_same_end_year_del_arc(*
+      <- eraseEl;;
+      -> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc37;;
+      => nrel_goto: .proc_search_same_end_year;;
+      *);;
+    -> .proc_check_bool_end_year(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_year;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_end_day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_end_year;;
+      => nrel_then: .proc_search_same_end_month;;
+      => nrel_else: .proc_add_event;; 
+      *);;
+    -> .proc_search_same_end_month(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_month_set;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc38;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_month_date;;
+      => nrel_then: .proc_search_same_end_month_debug;;
+      => nrel_else: .proc_check_bool_end_month;;
+      *);;
+    -> .proc_search_same_end_month_debug(*
+      <- printEl;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_month_date;;
+      => nrel_goto: .proc_search_same_end_month_link;;
+      *);;
+    -> .proc_search_same_end_month_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_month_date;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc38_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_month_date_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc38_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_same_end_month_1;;
+      *);;
+    -> .proc_search_same_end_month_1(*
+      <- ifEq;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_month_date_link;;
+      -> rrel_2: rrel_fixed: rrel_scp_var: _new_event_end_month_link;;
+      => nrel_then: .proc_gen_bool_end_month;;
+      => nrel_else: .proc_search_same_end_month_del_arc;;
+      *);;
+    -> .proc_gen_bool_end_month(*
+      <- genElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_month;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_end_month;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_end_month;;
+      => nrel_goto: .proc_search_same_end_month_del_arc;;
+      *);;
+    -> .proc_search_same_end_month_del_arc(*
+      <- eraseEl;;
+      -> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc38;;
+      => nrel_goto: .proc_search_same_end_month;;
+      *);;
+    -> .proc_check_bool_end_month(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_month;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_end_month;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_end_month;;
+      => nrel_then: .proc_search_same_end_day;;
+      => nrel_else: .proc_add_event;;
+      *);;
+    -> .proc_search_same_end_day(*
+      <- searchElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_day_set;;
+      -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc39;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_day_date;;
+      => nrel_then: .proc_search_same_end_day_link;;
+      => nrel_else: .proc_check_bool_end_day;;
+      *);;
+    -> .proc_search_same_end_day_link(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_day_date;;
+      -> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc39_1;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _end_day_date_link;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc39_2;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+      => nrel_goto: .proc_search_same_end_day_1;;
+      *);;
+    -> .proc_search_same_end_day_1(*
+      <- ifEq;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _end_day_date_link;;
+      -> rrel_2: rrel_fixed: rrel_scp_var: _new_event_end_day_link;;
+      => nrel_then: .proc_gen_bool_end_day;;
+      => nrel_else: .proc_search_same_end_day_del_arc;;
+      *);;
+    -> .proc_gen_bool_end_day(*
+      <- genElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_day;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_end_day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_end_day;;
+      => nrel_goto: .proc_search_same_end_day_del_arc;;
+      *);;
+    -> .proc_search_same_end_day_del_arc(*
+      <- eraseEl;;
+      -> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc39;;
+      => nrel_goto: .proc_search_same_end_day;;
+      *);;
+    -> .proc_check_bool_end_day(*
+      <- searchElStr5;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _new_event_end_day;;
+      -> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _bool_arc_5;;
+      -> rrel_3: rrel_assign: rrel_scp_var: _bool_end_day;;
+      -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _bool_arc_6;;
+      -> rrel_5: rrel_fixed: rrel_scp_const: nrel_bool_end_day;;
+      => nrel_then: .proc_search_user_events_return_1;;
+      => nrel_else: .proc_add_event;;
+      *);;
+    -> .proc_add_event(*
+    	<- genElStr3;;
+    	-> rrel_1: rrel_fixed: rrel_scp_var: _user;;
+    	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc42;;
+    	-> rrel_3: rrel_fixed: rrel_scp_var: _new_event;;
+    	=> nrel_goto: .proc_add_event_arc;;
+    	*);;
+    -> .proc_search_user_events_return_1(*
+      <- genElStr3;;
+      -> rrel_1: rrel_fixed: rrel_scp_var: _user;;
+      -> rrel_2: rrel_assign: rrel_neg: rrel_const: rrel_scp_var: _arc42;;
+      -> rrel_3: rrel_fixed: rrel_scp_var: _new_event;;
+      => nrel_goto: .proc_add_event_arc;;
+      *);;
+    -> .proc_add_event_arc(*
+    	<- genElStr3;;
+    	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+    	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc43;;
+    	-> rrel_3: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _arc42;;
+    	=> nrel_goto: .proc_add_event_answer;;
+    	*);;
+     -> .proc_add_event_answer(*
+    	<- genElStr5;;
+    	-> rrel_1: rrel_fixed: rrel_scp_var: _question;;
+    	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc44;;
+    	-> rrel_3: rrel_fixed: rrel_scp_var: _answer;;
+    	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc45;;
+    	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+    	=> nrel_goto: .proc_search_user_events_return_2;;
+    	*);;
+    -> .proc_search_user_events_return_2(*
+      <- return;;
+      *);;
+    *);;
+	*);;

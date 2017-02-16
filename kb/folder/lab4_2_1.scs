@@ -1,0 +1,11 @@
+nrel_generality -> name211;;
+name1 => nrel_main_idtf : [Диагонали ромба пересекаются под прямым углом.](*<- lang_ru;;*);;
+name1->rrel_bind_variables: _r1; _d1; _d2;;
+name1->..name2;;
+nrel_implication-> ..name2;;
+..name2 -> rrel_if : [* _r1 _<- rhombus;; *] (* <- concept_atomic_existence ;;*) ;;
+..name2 -> rrel_then : [*  concept_segment -> _d1;;
+							concept_segment -> _d2;;
+							_d1 _<=> nrel_perpendicularity: _d2;;
+							_r1 _=> nrel_diagonal: _d1;;
+							_r1 _=> nrel_diagonal: _d2;; *] (* <- concept_atomic_existence ;;*) ;;

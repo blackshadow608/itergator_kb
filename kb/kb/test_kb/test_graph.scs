@@ -1,0 +1,168 @@
+sc_node_not_relation -> google_calendar; birthday; 
+task; date; completnes; parameter; calendar_scale; meropriyatie; users; not_rel_dates;;
+sc_node_norole_relation -> decomposition; nrel_clndr; nrel_begin_event; nrel_end_event;;
+sc_node_role_relation -> role_task; timetable; role_meropriytie;
+rrel_year_num; rrel_month_num; rrel_day_num; rrel_event;;
+
+google_calendar => nrel_main_idtf:
+[Google календарь](* <- lang_ru;; *);
+[Google calendar](* <- lang_en;; *);;
+birthday => nrel_main_idtf:
+[День рождения](* <- lang_ru;; *);
+[Birthday](* <- lang_en;; *);;
+task => nrel_main_idtf:
+[Задача](* <- lang_ru;; *);
+[Task](* <- lang_en;; *);;
+date => nrel_main_idtf:
+[Дата](* <- lang_ru;; *);
+[Date](* <- lang_en;; *);;
+completnes => nrel_main_idtf:
+[Завершение](* <- lang_ru;; *);
+[Completnes](* <- lang_en;; *);;
+parameter => nrel_main_idtf:
+[Параметр](* <- lang_ru;; *);
+[Parameter](* <- lang_en;; *);;
+calendar_scale => nrel_main_idtf:
+[Шкала](* <- lang_ru;; *);
+[calendar_scale](* <- lang_en;; *);;
+meropriyatie => nrel_main_idtf:
+[Мероприятие](* <- lang_ru;; *);;
+users => nrel_main_idtf:
+[Пользователи](* <- lang_ru;; *);
+[Users](* <- lang_en;; *);;
+nrel_clndr => nrel_main_idtf:
+[григорианский календарь*](* <- lang_ru;; *);
+[grigorian calendar*](* <- lang_en;; *);;
+decomposition => nrel_main_idtf:
+[декомпозиция*](* <- lang_ru;; *);
+[decomposition*](* <- lang_en;; *);;
+nrel_begin_event => nrel_main_idtf:
+[начало события*](* <- lang_ru;; *);
+[begin event*](* <- lang_en;; *);;
+nrel_end_event => nrel_main_idtf:
+[завершение события*](* <- lang_ru;; *);
+[end event*](* <- lang_en;; *);;
+role_task => nrel_main_idtf:
+[задача'](* <- lang_ru;; *);
+[task'](* <- lang_en;; *);;
+timetable => nrel_main_idtf:
+[расписание'](* <- lang_ru;; *);
+[timetable'](* <- lang_en;; *);;
+role_meropriytie => nrel_main_idtf:
+[мероприятие'](* <- lang_ru;; *);;
+rrel_year_num => nrel_main_idtf:
+[номер года'](* <- lang_ru;; *);
+[year number'](* <- lang_en;; *);;
+rrel_month_num => nrel_main_idtf:
+[номер месяца в году'](* <- lang_ru;; *);
+[month number on year'](* <- lang_en;; *);;
+rrel_day_num => nrel_main_idtf:
+[номер дня в месяца'](* <- lang_ru;; *);
+[day number on month'](* <- lang_en;; *);;
+rrel_event => nrel_main_idtf:
+[событие'](* <- lang_ru;; *);
+[event'](* <- lang_en;; *);;
+14 => nrel_main_idtf:
+[14](* <- lang_ru;; *);
+[14](* <- lang_en;; *);;
+7 => nrel_main_idtf:
+[7](* <- lang_ru;; *);
+[7](* <- lang_en;; *);;
+2016 => nrel_main_idtf:
+[2016](* <- lang_ru;; *);
+[2016](* <- lang_en;; *);;
+12 => nrel_main_idtf:
+[12](* <- lang_ru;; *);
+[12](* <- lang_en;; *);;
+13 => nrel_main_idtf:
+[13](* <- lang_ru;; *);
+[13](* <- lang_en;; *);;
+3 => nrel_main_idtf:
+[3](* <- lang_ru;; *);
+[3](* <- lang_en;; *);;
+11 => nrel_main_idtf: 
+[11](* <- lang_ru;; *);
+[11](* <- lang_en;; *);;
+1996 => nrel_main_idtf:
+[1996](* <- lang_ru;; *);
+[1996](* <- lang_en;; *);;
+16 => nrel_main_idtf:
+[16](* <- lang_ru;; *);
+[16](* <- lang_en;; *);;
+18 => nrel_main_idtf:
+[18](* <- lang_ru;; *);
+[18](* <- lang_en;; *);;
+
+task -> go_to_the_cinema;;
+date <- completnes;;
+completnes <- parameter;;
+date -> go_to_the_cinema_begin_date;;
+date -> go_to_the_cinema_end_date;;
+go_to_the_cinema => nrel_begin_event : go_to_the_cinema_begin_date;;
+go_to_the_cinema => nrel_end_event : go_to_the_cinema_end_date;;
+calendar_scale -> nrel_clndr;;
+go_to_the_cinema_begin_date => nrel_clndr : ..one_node;;
+go_to_the_cinema_end_date => nrel_clndr : ..one_node;;
+not_rel_dates -> ..one_node;;
+..one_node -> rrel_year_num : 2016;;
+..one_node -> rrel_day_num : 14;;
+..one_node -> rrel_month_num : 12;;
+
+independence_day <- event;;
+date -> independence_day_begin_date;;
+date -> independence_day_end_date;;
+independence_day => nrel_begin_event : independence_day_begin_date;;
+independence_day => nrel_end_event : independence_day_end_date;;
+independence_day_begin_date => nrel_clndr : ..two_node;;
+independence_day_end_date => nrel_clndr : ..two_node;;
+not_rel_dates -> ..two_node;;
+..two_node -> rrel_month_num : 7;;
+..two_node -> rrel_day_num : 3;;
+..two_node -> rrel_year_num : 2016;;
+
+project_deadline <- task;;
+date -> project_deadline_begin_date;;
+date -> project_deadline_end_date;;
+project_deadline => nrel_begin_event : project_deadline_begin_date;;
+project_deadline => nrel_end_event : project_deadline_end_date;;
+project_deadline_begin_date => nrel_clndr : ..three_node;;
+project_deadline_end_date => nrel_clndr : ..three_node;;
+not_rel_dates -> ..three_node;;
+..three_node -> rrel_day_num : 12;;
+..three_node -> rrel_month_num : 11;;
+..three_node -> rrel_year_num : 2016;;
+
+nastya_birthday <- birthday;;
+date -> nastya_birthday_begin_date;;
+date -> nastya_birthday_end_date;;
+nastya_birthday => nrel_begin_event : nastya_birthday_begin_date;;
+nastya_birthday => nrel_end_event : nastya_birthday_end_date;;
+nastya_birthday_begin_date => nrel_clndr : ..four_node;;
+nastya_birthday_end_date => nrel_clndr : ..four_node;;
+not_rel_dates -> ..four_node;;
+..four_node -> rrel_month_num : 12;;
+..four_node -> rrel_day_num : 12;;
+..four_node -> rrel_year_num : 1996;;
+
+OSTIS_conferention <- event;;
+date -> OSTIS_conferention_begin_date;;
+date -> OSTIS_conferention_end_date;;
+OSTIS_conferention => nrel_begin_event : OSTIS_conferention_begin_date;;
+OSTIS_conferention => nrel_end_event : OSTIS_conferention_end_date;;
+OSTIS_conferention_begin_date => nrel_clndr : ..five_begin_node;;
+OSTIS_conferention_end_date => nrel_clndr : ..five_end_node;;
+not_rel_dates -> ..five_begin_node;;
+not_rel_dates -> ..five_end_node;;
+..five_begin_node -> rrel_month_num : 2;;
+..five_begin_node -> rrel_day_num : 16;;
+..five_begin_node -> rrel_year_num : 2017;;
+..five_end_node -> rrel_month_num : 2;;
+..five_end_node -> rrel_day_num : 18;;
+..five_end_node -> rrel_year_num : 2017;;
+
+test_user <- users;;
+test_user -> go_to_the_cinema;;
+test_user -> independence_day;;
+test_user -> project_deadline;;
+test_user -> nastya_birthday;;
+test_user -> OSTIS_conferention;;

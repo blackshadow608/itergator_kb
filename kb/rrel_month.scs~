@@ -1,0 +1,21 @@
+//синонимы
+sc_node_role_relation -> rrel_the_month_of_the_year;;
+rrel_the_month_of_the_year => nrel_main_idtf :[месяц'] (* <- lang_ru;; *);;
+rrel_the_month_of_the_year => nrel_main_idtf :[month'](* <- lang_en;; *);;
+
+//определение 
+
+rrel_the_month_of_the_year <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(месяц')]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Дата начала события 2 января 2017 года]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+

@@ -1,0 +1,29 @@
+ch_7952740168263281431 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s_7952740168263281431;
+    => nrel_main_idtf:
+        [Минск-Восточный];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				5;;
+        			-> rrel_minutes:
+        				54;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				5;;
+        			-> rrel_minutes:
+        				55;;
+        		*);;
+        *);;

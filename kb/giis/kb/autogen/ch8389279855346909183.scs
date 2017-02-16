@@ -1,0 +1,29 @@
+ch8389279855346909183 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s8389279855346909183;
+    => nrel_main_idtf:
+        [Масюковщина];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				8;;
+        			-> rrel_minutes:
+        				22;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				8;;
+        			-> rrel_minutes:
+        				23;;
+        		*);;
+        *);;

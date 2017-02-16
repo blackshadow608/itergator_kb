@@ -1,0 +1,15 @@
+tr565603044182977296 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Минск-Пассажирский — Барановичи-Полесские](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [6801];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch_4800834790695270770;;
+    		->rrel_rw_route_point: ch_4800834790695270770;;
+    		->rrel_rw_route_point: ch_7039852571499713225;;
+    		->rrel_rw_route_last_point: ch_7039852571499713225;;
+    	*);;
+
+ch_4800834790695270770 => nrel_next_point: ch_7039852571499713225;;

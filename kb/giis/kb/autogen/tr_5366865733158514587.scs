@@ -1,0 +1,17 @@
+tr_5366865733158514587 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Талька — Институт Культуры](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [6917];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch9216701450681477129;;
+    		->rrel_rw_route_point: ch9216701450681477129;;
+    		->rrel_rw_route_point: ch_5324786418727486541;;
+    		->rrel_rw_route_point: ch7601248984422695541;;
+    		->rrel_rw_route_last_point: ch7601248984422695541;;
+    	*);;
+
+ch9216701450681477129 => nrel_next_point: ch_5324786418727486541;;
+ch_5324786418727486541 => nrel_next_point: ch7601248984422695541;;

@@ -1,0 +1,10 @@
+rrel_rw_route_point
+    => nrel_main_idtf:
+        [train route checkpoint'] (* <- lang_en;; *);
+        [точка маршрута поезда'] (* <- lang_ru;; *);;
+        
+    <- sc_node_role_relation;
+	<- sc_type_role_relation;
+	<- binary_relation;
+	=> nrel_first_domain: concept_railway_route;
+    => nrel_second_domain: concept_rw_route_check_point;;

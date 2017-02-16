@@ -1,0 +1,29 @@
+ch_4800834790695270770 <- concept_rw_route_check_point;
+	=> nrel_rw_station:
+        s_4800834790695270770;
+    => nrel_main_idtf:
+        [Минск-Пассажирский];
+	=> nrel_arrival_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				13;;
+        			-> rrel_minutes:
+        				16;;
+        		*);;
+        *);
+	=> nrel_departure_time:
+        ...
+        (*
+        	<= nrel_value:
+        		...
+        		(*
+        			-> rrel_hours:
+        				0;;
+        			-> rrel_minutes:
+        				0;;
+        		*);;
+        *);;

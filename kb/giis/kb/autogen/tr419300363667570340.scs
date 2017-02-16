@@ -1,0 +1,15 @@
+tr419300363667570340 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Гомель — Минск-Пассажирский](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [647Б];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch_4800834790695270770;;
+    		->rrel_rw_route_point: ch_4800834790695270770;;
+    		->rrel_rw_route_point: ch_4800834790695270770;;
+    		->rrel_rw_route_last_point: ch_4800834790695270770;;
+    	*);;
+
+ch_4800834790695270770 => nrel_next_point: ch_4800834790695270770;;

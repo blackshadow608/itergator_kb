@@ -1,0 +1,21 @@
+tr4932472739673538397 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Борисов — Институт Культуры](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [6001];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch3206525738732559613;;
+    		->rrel_rw_route_point: ch3206525738732559613;;
+    		->rrel_rw_route_point: ch3639498611884321712;;
+    		->rrel_rw_route_point: ch6316555872572156612;;
+    		->rrel_rw_route_point: ch_7952740168263281431;;
+    		->rrel_rw_route_point: ch7601248984422695541;;
+    		->rrel_rw_route_last_point: ch7601248984422695541;;
+    	*);;
+
+ch3206525738732559613 => nrel_next_point: ch3639498611884321712;;
+ch3639498611884321712 => nrel_next_point: ch6316555872572156612;;
+ch6316555872572156612 => nrel_next_point: ch_7952740168263281431;;
+ch_7952740168263281431 => nrel_next_point: ch7601248984422695541;;

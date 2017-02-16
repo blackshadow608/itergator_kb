@@ -1,0 +1,50 @@
+//синонимы
+sc_node_not_relation -> static_web_page;;
+static_web_page => nrel_main_idtf :[статическая веб-страница] (* <- lang_ru;; *);;
+static_web_page => nrel_main_idtf :[static web page](* <- lang_en;; *);;
+
+//определение 
+
+static_web_page <- rrel_key_sc_element: 
+        ...
+	(*
+	=> nrel_main_idtf: [Опр.(статическая веб-страница)]  (* <- lang_ru;; *);;
+	<- sc_explanation;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Статическая веб-страница — страница, на которой отсутствуют javascript сценарии]
+			(* <- lang_ru;; *);;
+		*);; 
+	*);;
+
+
+//утверждения
+
+static_web_page <- rrel_key_sc_element: 
+...
+(*
+=> nrel_main_idtf: [Утв.(Статическая веб-страница)] (* <- lang_ru;; *);; 
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Статическая веб-страница дешевле в разработке, чем динамическая.]
+(* <- lang_ru;; *);;
+*);;
+*);
+
+... 
+(*
+=> nrel_main_idtf: [Утв.(Статическая веб-страница)] (* <- lang_ru;; *);;
+<- sc_statement;;
+<= nrel_sc_text_translation: 
+...
+(*
+-> rrel_example: 
+[Статическая веб-страница быстрее загружается, чем динамическая.](* <- lang_ru;; *);;
+*);;
+*);;
+

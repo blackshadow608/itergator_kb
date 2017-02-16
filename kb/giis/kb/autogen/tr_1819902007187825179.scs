@@ -1,0 +1,15 @@
+tr_1819902007187825179 <- concept_railway_train;
+	=> nrel_main_idtf:
+        [Гудогай — Минск-Пассажирский](*<- lang_ru;;*);
+    => nrel_rw_train_number:
+        [7032];
+    => nrel_rw_train_route:
+    	...
+    	(*
+    	    ->rrel_rw_route_first_point: ch4741595669798131240;;
+    		->rrel_rw_route_point: ch4741595669798131240;;
+    		->rrel_rw_route_point: ch_4800834790695270770;;
+    		->rrel_rw_route_last_point: ch_4800834790695270770;;
+    	*);;
+
+ch4741595669798131240 => nrel_next_point: ch_4800834790695270770;;
